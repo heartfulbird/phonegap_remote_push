@@ -116,4 +116,8 @@
     </platform>
 
     <gap:plugin name="phonegap-plugin-push" source="npm" />
+
+    <plugin name="phonegap-plugin-push" spec="1.6.0">
+        <param name="SENDER_ID" value="89210954243" />
+    </plugin>
 </widget>

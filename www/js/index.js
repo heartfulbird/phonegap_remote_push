@@ -65,7 +65,7 @@ var app = {
             window.tests.push(data);
             window.tests.push(data.registrationId);
             // GOT it !!!
-            // egYevhI_AEk:APA91bEYiTB1Z3LGMDTMxbPRrPkt0evNAT5MXeuKZjEXsxTa1YqoAlLNEg9HPVV-Owdb7AVFiIxriDAxQFeyOMWl-kxjDIoOl2flbfNfbhEHHC4XEoyc0HLGHKDTpURFJxA-OSBUWLQ-
+            // gYevhI_AEk:APA91bFnwlEcDBjK7PvhAecmTq1ZFimstg5vuOrXlmbQaltlvNJQwnQXBF_xNtbxkrLuVWGhNYky-lmqBJ-4-I9Ad6qET12E2CFdQOfUm7YET-jRFueSHgEttyCi3Q_TVU8KDow8a2jH
         });
 
         push.on('notification', function(data) {
@@ -76,6 +76,12 @@ var app = {
             // data.image,
             // data.additionalData
             window.tests.push(data);
+            navigator.notification.alert(
+                    data.message,         // message
+                    null,                 // callback
+                    data.title,           // title
+                    'Ok'                  // buttonName
+            );
         });
 
         push.on('error', function(e) {
