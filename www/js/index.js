@@ -46,7 +46,7 @@ var app = {
             android: {
                 //only digits!!!
                 //senderID: "digger-159520"
-                senderID: "159520"
+                senderID: "89210954243"
             },
             // optional if you use some server for pushes
             //browser: {
