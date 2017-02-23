@@ -76,20 +76,24 @@ var app = {
             // data.image,
             // data.additionalData
             window.tests.push(data);
-            //navigator.notification.alert(
-            //        data.message,         // message
-            //        null,                 // callback
-            //        data.title,           // title
-            //        'Ok'                  // buttonName
-            //);
-            console.log(data.additionalData.summary_for_mobile);
-            console.log(data.additionalData.title_for_mobile);
+
+            // very unpredictable how it converted after click on ntfc and works here with another data variables
+            // https://github.com/phonegap/phonegap-plugin-push/blob/master/docs/PAYLOAD.md
             navigator.notification.alert(
-                    data.additionalData.summary_for_mobile,         // message
+                    data.message,         // message
                     null,                 // callback
-                    data.additionalData.title_for_mobile,           // title
+                    data.title,           // title
                     'Ok'                  // buttonName
             );
+
+            //console.log(data.additionalData.summary_for_mobile);
+            //console.log(data.additionalData.title_for_mobile);
+            //navigator.notification.alert(
+            //        data.additionalData.summary_for_mobile,         // message
+            //        null,                 // callback
+            //        data.additionalData.title_for_mobile,           // title
+            //        'Ok'                  // buttonName
+            //);
 
             //"title_for_mobile" => "Fitchwitz Technology",
             //        "summary_for_mobile"
