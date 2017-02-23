@@ -68,6 +68,13 @@ var app = {
             windows: {}
         });
 
+        var push = PushNotification.init({
+            android: {
+                senderID: "159520"
+            },
+            windows: {}
+        });
+
         push.on('registration', function(data) {
             // data.registrationId
             window.tests.push(data);
