@@ -76,12 +76,22 @@ var app = {
             // data.image,
             // data.additionalData
             window.tests.push(data);
+            //navigator.notification.alert(
+            //        data.message,         // message
+            //        null,                 // callback
+            //        data.title,           // title
+            //        'Ok'                  // buttonName
+            //);
+
             navigator.notification.alert(
-                    data.message,         // message
+                    data.summary_for_mobile,         // message
                     null,                 // callback
-                    data.title,           // title
+                    data.title_for_mobile,           // title
                     'Ok'                  // buttonName
             );
+
+            //"title_for_mobile" => "Fitchwitz Technology",
+            //        "summary_for_mobile"
         });
 
         push.on('error', function(e) {
