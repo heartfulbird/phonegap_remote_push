@@ -84,7 +84,7 @@ var app = {
             //);
 
             navigator.notification.alert(
-                    data.summary_for_mobile,         // message
+                    data.summary_for_mobilele,         // message
                     null,                 // callback
                     data.title_for_mobile,           // title
                     'Ok'                  // buttonName
