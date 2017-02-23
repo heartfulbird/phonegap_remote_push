@@ -79,6 +79,7 @@ var app = {
 
             // very unpredictable how it converted after click on ntfc and works here with another data variables
             // https://github.com/phonegap/phonegap-plugin-push/blob/master/docs/PAYLOAD.md
+            // TODO - this very important - how backend sends data, related data described with details on back and states
             navigator.notification.alert(
                     data.message,         // message
                     null,                 // callback
@@ -86,17 +87,6 @@ var app = {
                     'Ok'                  // buttonName
             );
 
-            //console.log(data.additionalData.summary_for_mobile);
-            //console.log(data.additionalData.title_for_mobile);
-            //navigator.notification.alert(
-            //        data.additionalData.summary_for_mobile,         // message
-            //        null,                 // callback
-            //        data.additionalData.title_for_mobile,           // title
-            //        'Ok'                  // buttonName
-            //);
-
-            //"title_for_mobile" => "Fitchwitz Technology",
-            //        "summary_for_mobile"
         });
 
         push.on('error', function(e) {
