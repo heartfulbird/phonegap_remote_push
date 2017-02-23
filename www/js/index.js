@@ -64,8 +64,20 @@ var app = {
             // data.registrationId
             window.tests.push(data);
             window.tests.push(data.registrationId);
+
             // GOT it !!!
             // gYevhI_AEk:APA91bFnwlEcDBjK7PvhAecmTq1ZFimstg5vuOrXlmbQaltlvNJQwnQXBF_xNtbxkrLuVWGhNYky-lmqBJ-4-I9Ad6qET12E2CFdQOfUm7YET-jRFueSHgEttyCi3Q_TVU8KDow8a2jH
+
+
+            // TODO: Important!! dont make request every time to services
+            //console.log('registration event: ' + data.registrationId);
+            //
+            //var oldRegId = localStorage.getItem('registrationId');
+            //if (oldRegId !== data.registrationId) {
+            //    // Save new registration ID
+            //    localStorage.setItem('registrationId', data.registrationId);
+            //    // Post registrationId to your app server as the value has changed
+            //}
         });
 
         push.on('notification', function(data) {
