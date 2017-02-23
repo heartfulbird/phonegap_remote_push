@@ -42,22 +42,13 @@ var app = {
         window.tests.push('INITIALIZED');
 
         // REGISTER IN GCM
-        //var pushNotification = window.plugins.pushNotification;
-        //
-        //pushNotification.register(
-        //        successHandler,
-        //        errorHandler,
-        //        {
-        //          'senderID':'digger-159520',
-        //          'ecb':'onNotificationGCM' // callback function
-        //        }
-        //);
-
         var push = PushNotification.init({
             android: {
+                //only digits!!!
                 //senderID: "digger-159520"
                 senderID: "159520"
             },
+            // optional if you use some server for pushes
             //browser: {
             //  pushServiceURL: 'http://push.api.phonegap.com/v1/push'
             //},
@@ -69,17 +60,12 @@ var app = {
             windows: {}
         });
 
-        //var push = PushNotification.init({
-        //    android: {
-        //        senderID: "159520"
-        //    },
-        //    windows: {}
-        //});
-
         push.on('registration', function(data) {
             // data.registrationId
             window.tests.push(data);
             window.tests.push(data.registrationId);
+            // GOT it !!!
+            // egYevhI_AEk:APA91bEYiTB1Z3LGMDTMxbPRrPkt0evNAT5MXeuKZjEXsxTa1YqoAlLNEg9HPVV-Owdb7AVFiIxriDAxQFeyOMWl-kxjDIoOl2flbfNfbhEHHC4XEoyc0HLGHKDTpURFJxA-OSBUWLQ-
         });
 
         push.on('notification', function(data) {
