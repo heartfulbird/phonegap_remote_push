@@ -82,11 +82,12 @@ var app = {
             //        data.title,           // title
             //        'Ok'                  // buttonName
             //);
-
+            console.log(data.additionalData.summary_for_mobile);
+            console.log(data.additionalData.title_for_mobile);
             navigator.notification.alert(
-                    data.summary_for_mobilele,         // message
+                    data.additionalData.summary_for_mobile,         // message
                     null,                 // callback
-                    data.title_for_mobile,           // title
+                    data.additionalData.title_for_mobile,           // title
                     'Ok'                  // buttonName
             );
 
